@@ -723,7 +723,7 @@ main {
     }
     
     .contact-info {
-        flex-direction: column;
+        flex-direction: line;
         gap: 15px;
     }
     
