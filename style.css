@@ -516,7 +516,7 @@ main {
 /* ===== INGREDIENTES ===== */
 .ingredients {
     margin: 0 0 15px 0;
-    font-size: 1rem;
+    font-size: 0.7rem;
     line-height: 1.6;
     color: #d0d0d0;
     font-weight: 400;
@@ -816,10 +816,9 @@ main {
     }
     
     .item-badge {
-        top: 10px;
-        right: 10px;
         font-size: 0.7rem;
         padding: 4px 8px;
+        top: 15px;
     }
     
     .floating-icon {

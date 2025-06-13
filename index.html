@@ -50,6 +50,10 @@
     <div id="overlay"></div>
 
     <nav id="menu-nav">
+        <button class="nav-button" data-category="promociones">
+            <i class="fas fa-fire"></i>
+            <span>Promociones</span>
+        </button>
         <button class="nav-button active" data-category="hamburguesas">
             <i class="fas fa-hamburger"></i>
             <span>Hamburguesas</span>
@@ -81,6 +85,56 @@
     </nav>
 
     <main id="menu-container">
+        <section id="promociones" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-fire"></i> PROMOCIONES</h2>
+                <p class="category-subtitle">Descuentos especiales - ¡Ofertas de hoy!</p>
+            </div>
+            
+            <div class="menu-item featured promo-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Combo+Uno">
+                <div class="item-header">
+                    <h3>2 HAMBURGUESAS</h3>
+                    <span class="price promo-price">$16.000</span>
+                </div>
+                <p class="ingredients">Dos hamburguesas clásicas con carne 100% artesanal de res, queso doble crema, tomate, cebolla y lechuga.</p>
+                <div class="item-tags">
+                    <span class="tag promo-tag">¡AHORRA!</span>
+                    </div>
+            </div>
+
+            <div class="menu-item special promo-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Combo+Dos">
+                <div class="item-header">
+                    <h3>3 HOT DOG SENCILLOS</h3>
+                    <span class="price promo-price">$20.000</span>
+                </div>
+                <p class="ingredients">Tres perros calientes sencillos con salchicha americana, cebolla, papitas chips y queso doble crema.</p>
+                <div class="item-tags">
+                    <span class="tag promo-tag">¡SUPER PRECIO!</span>
+                    </div>
+            </div>
+
+            <div class="menu-item premium promo-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Combo+Tres">
+                <div class="item-header">
+                    <h3>2 HAMBURGUESAS + PAPAS + BEBIDA</h3>
+                    <span class="price promo-price">$26.000</span>
+                </div>
+                <p class="ingredients">Dos hamburguesas con carne 100% artesanal, queso doble crema, vegetales frescos, más papas fritas y bebida incluida.</p>
+                <div class="item-tags">
+                    <span class="tag promo-tag">¡COMPLETO!</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium promo-item destacado" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Combo+Familiar">
+                <div class="item-header">
+                    <h3>4 HAMBURGUESAS + UNA PAPA LOCA</h3>
+                    <span class="price promo-price">$50.000</span>
+                </div>
+                <p class="ingredients">Cuatro hamburguesas con carne 100% artesanal de res, queso doble crema y vegetales frescos, más una deliciosa Papa Loca para compartir.</p>
+                <div class="item-tags">
+                    <span class="tag promo-tag">¡PARA COMPARTIR!</span>
+                </div>
+            </div>
+        </section>
         <section id="hamburguesas" class="menu-category active">
             <div class="category-header">
                 <h2><i class="fas fa-hamburger"></i> HAMBURGUESAS</h2>
