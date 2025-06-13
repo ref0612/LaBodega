@@ -749,12 +749,13 @@
             mobileMenuButton.addEventListener('click', toggleMobileMenu);
             overlay.addEventListener('click', closeMobileMenu);
             
-            productItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const imageSrc = item.getAttribute('data-image-src');
-                    openModal(imageSrc);
-                });
-            });
+            // Temporarily disabled modal while fetching photos
+            // productItems.forEach(item => {
+            //     item.addEventListener('click', () => {
+            //         const imageSrc = item.getAttribute('data-image-src');
+            //         openModal(imageSrc);
+            //     });
+            // });
 
             closeModalBtn.addEventListener('click', closeModal);
             modalOverlay.addEventListener('click', closeModal);
