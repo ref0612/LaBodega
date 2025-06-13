@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - LA BODEGA Hamburgueseria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&family=Fredoka+One&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fondo temático animado -->
+    <div class="background-elements">
+        <div class="floating-icon" style="--delay: 0s; --duration: 15s;">🍔</div>
+        <div class="floating-icon" style="--delay: 2s; --duration: 18s;">🍟</div>
+        <div class="floating-icon" style="--delay: 4s; --duration: 20s;">🌭</div>
+        <div class="floating-icon" style="--delay: 6s; --duration: 16s;">🥓</div>
+        <div class="floating-icon" style="--delay: 8s; --duration: 19s;">🧀</div>
+        <div class="floating-icon" style="--delay: 10s; --duration: 17s;">🍖</div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <h1>LA BODEGA</h1>
+            <h2>Hamburgueseria</h2>
+            <div class="logo-accent">
+                <i class="fas fa-fire"></i>
+                <span>Sabor Auténtico</span>
+                <i class="fas fa-fire"></i>
+            </div>
+        </div>
+        <div class="contact-info">
+            <span>Contáctanos</span>
+            <a href="https://wa.me/573103678276" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="social-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/labodega.tunja?igsh=OW1mdnVnNTRyZ21y" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram" class="social-btn instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <button id="mobile-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <div id="overlay"></div>
+
+    <nav id="menu-nav">
+        <button class="nav-button active" data-category="hamburguesas">
+            <i class="fas fa-hamburger"></i>
+            <span>Hamburguesas</span>
+        </button>
+        <button class="nav-button" data-category="perros">
+            <i class="fas fa-hotdog"></i>
+            <span>Perros Calientes</span>
+        </button>
+        <button class="nav-button" data-category="choriperros">
+            <i class="fas fa-sausage"></i>
+            <span>Choriperros</span>
+        </button>
+        <button class="nav-button" data-category="papas">
+            <i class="fas fa-french-fries"></i>
+            <span>Papas y Mazorcadas</span>
+        </button>
+        <button class="nav-button" data-category="costillas-alitas">
+            <i class="fas fa-drumstick-bite"></i>
+            <span>Costillas y Alitas</span>
+        </button>
+        <button class="nav-button" data-category="arepas">
+            <i class="fas fa-bread-slice"></i>
+            <span>Arepas</span>
+        </button>
+        <button class="nav-button" data-category="platos">
+            <i class="fas fa-utensils"></i>
+            <span>Platos a la Carta</span>
+        </button>
+    </nav>
+
+    <main id="menu-container">
+        <section id="hamburguesas" class="menu-category active">
+            <div class="category-header">
+                <h2><i class="fas fa-hamburger"></i> HAMBURGUESAS</h2>
+                <p class="category-subtitle">Las mejores hamburguesas con carne 100% de res</p>
+            </div>
+            
+            <div class="menu-item featured" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Americana">
+                <div class="item-badge">Popular</div>
+                <div class="item-header">
+                    <h3>AMERICANA</h3>
+                    <span class="price">$9.000</span>
+                </div>
+                <p class="ingredients">125 gr de carne 100% de res, queso doble crema, tomate, cebolla y lechuga.</p>
+                <div class="item-tags">
+                    <span class="tag">Clásica</span>
+                    <span class="tag">125gr</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=La+Bodeguita">
+                <div class="item-header">
+                    <h3>LA BODEGUITA</h3>
+                    <span class="price">$11.000</span>
+                </div>
+                <p class="ingredients">125 gr de carne 100% de res, queso doble crema, tocineta, maíz, tomate, cebolla, lechuga.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Tocineta</span>
+                    <span class="tag">125gr</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Clasica+La+Bodega">
+                <div class="item-badge special-badge">Especial</div>
+                <div class="item-header">
+                    <h3>CLÁSICA LA BODEGA</h3>
+                    <span class="price">$14.000</span>
+                </div>
+                <p class="ingredients">125 gr de carne 100% de res, chorizo, queso doble crema, tocineta, maíz, tomate, cebolla, lechuga.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Chorizo</span>
+                    <span class="tag">125gr</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=H.+de+Pollo">
+                <div class="item-header">
+                    <h3>HAMBURGUESA DE POLLO</h3>
+                    <span class="price">$16.000</span>
+                </div>
+                <p class="ingredients">Filete de pollo, queso doble crema, tocineta, tomate, cebolla, lechuga.</p>
+                <div class="item-tags">
+                    <span class="tag">Pollo</span>
+                    <span class="tag">Saludable</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Super+Bodega">
+                <div class="item-badge premium-badge">Premium</div>
+                <div class="item-header">
+                    <h3>SUPER BODEGA</h3>
+                    <span class="price">$20.000</span>
+                </div>
+                <p class="ingredients">Doble carne de 125gr 100% de res, huevo, champiñón, queso doble crema, tocineta y maíz, tomate, cebolla, lechuga.</p>
+                <div class="item-tags">
+                    <span class="tag">Doble Carne</span>
+                    <span class="tag">Con Huevo</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Duocarne">
+                <div class="item-header">
+                    <h3>DUOCARNE</h3>
+                    <span class="price">$20.000</span>
+                </div>
+                <p class="ingredients">125 gr de carne 100% de res, 125 gr de carne cerdo o pollo, queso doble crema, tocineta, jamón, tomate, cebolla, lechuga y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">Mixta</span>
+                    <span class="tag">+ Bebida</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Tricarne">
+                <div class="item-badge premium-badge">Premium</div>
+                <div class="item-header">
+                    <h3>TRICARNE</h3>
+                    <span class="price">$25.000</span>
+                </div>
+                <p class="ingredients">125 gr de carne 100% de res, 125 gr de carne de cerdo, 125 gr de pollo, queso doble crema, tocineta, jamón, lechuga, tomate, cebolla y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">Triple Carne</span>
+                    <span class="tag">+ Bebida</span>
+                </div>
+            </div>
+
+            <!-- Continúa con el resto de hamburguesas con el mismo patrón -->
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Mexicana">
+                <div class="item-header">
+                    <h3>MEXICANA</h3>
+                    <span class="price">$23.000</span>
+                </div>
+                <p class="ingredients">200 gr de carne 100% de res, queso doble crema, tocineta, frijol refrito, jalapeños, tomate, cebolla y lechuga, papas fritas y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">Picante</span>
+                    <span class="tag">200gr</span>
+                    <span class="tag">Combo</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Big+Cheese">
+                <div class="item-header">
+                    <h3>BIG CHEESE</h3>
+                    <span class="price">$23.000</span>
+                </div>
+                <p class="ingredients">200 gr de carne 100% de res, queso doble crema, salsa de queso, tomate, cebolla, lechuga, papas fritas y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">Extra Queso</span>
+                    <span class="tag">Combo</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Hawaiiana">
+                <div class="item-header">
+                    <h3>HAWAIANA</h3>
+                    <span class="price">$23.000</span>
+                </div>
+                <p class="ingredients">200 gr de carne 100% de res, queso doble crema, tocineta, piña asada, tomate, cebolla, lechuga, papas fritas y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Piña</span>
+                    <span class="tag">Combo</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Reina+Pepiada">
+                <div class="item-header">
+                    <h3>REINA PEPIADA</h3>
+                    <span class="price">$24.000</span>
+                </div>
+                <p class="ingredients">200 gr de carne 100% de res, queso doble crema, tocineta, pollo en salsa bechamel, tomate, cebolla, lechuga, papas fritas y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">Bechamel</span>
+                    <span class="tag">Gourmet</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Argentina">
+                <div class="item-header">
+                    <h3>ARGENTINA</h3>
+                    <span class="price">$23.000</span>
+                </div>
+                <p class="ingredients">200 gr de carne 100% de res, chorizo argentino, chimichurri, queso doble crema, tocineta, tomate, cebolla, lechuga, papas fritas y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">Chimichurri</span>
+                    <span class="tag">Argentina</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Criolla">
+                <div class="item-header">
+                    <h3>CRIOLLA</h3>
+                    <span class="price">$23.000</span>
+                </div>
+                <p class="ingredients">200 gr de carne 100% de res, queso doble crema, tocineta, dos huevos fritos, tomate, cebolla, lechuga, papas fritas y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">Doble Huevo</span>
+                    <span class="tag">Combo</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Bodegazo">
+                <div class="item-badge premium-badge">¡GIGANTE!</div>
+                <div class="item-header">
+                    <h3>BODEGAZO</h3>
+                    <span class="price">$28.000</span>
+                </div>
+                <p class="ingredients">Doble carne de 200 gr 100% de res, doble queso, doble tocineta, doble jamón, tomate, cebolla, lechuga y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">400gr Carne</span>
+                    <span class="tag">Doble Todo</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Las demás secciones mantienen la estructura similar pero simplificada por espacio -->
+        <section id="perros" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-hotdog"></i> PERROS CALIENTES</h2>
+                <p class="category-subtitle">Auténticos perros con salchicha americana</p>
+            </div>
+            
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Perro+Americano">
+                <div class="item-header"><h3>AMERICANO</h3><span class="price">$8.000</span></div>
+                <p class="ingredients">Salchicha americana, cebolla, papitas chips y queso doble crema.</p>
+            </div>
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Perro+Clasico">
+                <div class="item-header"><h3>CLÁSICO</h3><span class="price">$11.000</span></div>
+                <p class="ingredients">Salchicha americana, Tocineta, maíz, papitas chips y queso doble crema.</p>
+            </div>
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Perro+Hawaiano">
+                <div class="item-header"><h3>HAWAIANO</h3><span class="price">$11.000</span></div>
+                <p class="ingredients">Salchicha americana, piña, Tocineta, maíz, cebolla, papitas chips y queso doble crema.</p>
+            </div>
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Perro+Criollo">
+                <div class="item-header"><h3>CRIOLLO</h3><span class="price">$14.000</span></div>
+                <p class="ingredients">Salchicha americana, pollo desmechado, mazorca gratinada, jamón, cebolla, papitas chips y queso doble crema.</p>
+            </div>
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Perro+Super+Bodega">
+                <div class="item-header"><h3>SUPER BODEGA</h3><span class="price">$14.000</span></div>
+                <p class="ingredients">Salchicha americana, champiñón, jamón, tocineta, maíz, cebolla, papa chips, queso doble crema.</p>
+            </div>
+        </section>
+
+        <section id="choriperros" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-sausage"></i> CHORIPERROS</h2>
+                <p class="category-subtitle">Con chorizo artesanal de la casa</p>
+            </div>
+            
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Choriperro+Clasico">
+                <div class="item-header">
+                    <h3>CLÁSICO</h3>
+                    <span class="price">$8.000</span>
+                </div>
+                <p class="ingredients">Chorizo artesanal, cebolla, papitas chips y queso doble crema.</p>
+                <div class="item-tags">
+                    <span class="tag">Artesanal</span>
+                    <span class="tag">Clásico</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Choriperro+La+Bodega">
+                <div class="item-header">
+                    <h3>LA BODEGA</h3>
+                    <span class="price">$10.000</span>
+                </div>
+                <p class="ingredients">Chorizo artesanal, tocineta, maíz, cebolla, papitas chips y queso doble crema.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Tocineta</span>
+                    <span class="tag">Maíz</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Choriperro+Super">
+                <div class="item-badge special-badge">Super</div>
+                <div class="item-header">
+                    <h3>SUPER BODEGA</h3>
+                    <span class="price">$14.000</span>
+                </div>
+                <p class="ingredients">Chorizo artesanal, champiñones, jamón, tocineta, maíz, cebolla, papitas chips y queso doble crema.</p>
+                <div class="item-tags">
+                    <span class="tag">Champiñones</span>
+                    <span class="tag">Jamón</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="papas" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-french-fries"></i> PAPAS Y MAZORCAS</h2>
+                <p class="category-subtitle">Para compartir y disfrutar</p>
+            </div>
+            
+            <div class="section-title">
+                <h3><i class="fas fa-fire"></i> PAPA LOCA</h3>
+            </div>
+            
+            <div class="menu-item featured" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Papa+Loca+Clasica">
+                <div class="item-badge">Popular</div>
+                <div class="item-header">
+                    <h3>CLÁSICA</h3>
+                    <span class="price">$18.000</span>
+                </div>
+                <p class="ingredients">2 porciones de papa, doble carne, tocineta, chorizo, papitas chips, lluvia de queso, salsa de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">2 Porciones</span>
+                    <span class="tag">Doble Carne</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Papa+Loca+Super">
+                <div class="item-badge premium-badge">¡GIGANTE!</div>
+                <div class="item-header">
+                    <h3>SUPER BODEGA</h3>
+                    <span class="price">$36.000</span>
+                </div>
+                <p class="ingredients">4 porciones de papa, cuatro carnes, doble tocineta, chorizo, maíz, huevo, papitas chips, lechuga, lluvia de queso, salsa de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">4 Porciones</span>
+                    <span class="tag">4 Carnes</span>
+                    <span class="tag">Para Compartir</span>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h3><i class="fas fa-corn"></i> MAZORCADAS</h3>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Mazorcada+La+Bodega">
+                <div class="item-header">
+                    <h3>LA BODEGA</h3>
+                    <span class="price">$12.000</span>
+                </div>
+                <p class="ingredients">250gr de maíz tierno, pollo, chorizo, lluvia de queso, papitas chips.</p>
+                <div class="item-tags">
+                    <span class="tag">250gr</span>
+                    <span class="tag">Pollo</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Mazorcada+Clasica">
+                <div class="item-header">
+                    <h3>CLÁSICA</h3>
+                    <span class="price">$14.000</span>
+                </div>
+                <p class="ingredients">250gr de maíz tierno, carne, chorizo, lluvia de queso, papitas chips.</p>
+                <div class="item-tags">
+                    <span class="tag">250gr</span>
+                    <span class="tag">Carne</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Mazorcada+Super">
+                <div class="item-badge special-badge">Super</div>
+                <div class="item-header">
+                    <h3>SUPER BODEGA</h3>
+                    <span class="price">$22.000</span>
+                </div>
+                <p class="ingredients">450gr de maíz tierno, doble carne, chorizo, lluvia de queso, papitas chips.</p>
+                <div class="item-tags">
+                    <span class="tag">450gr</span>
+                    <span class="tag">Doble Carne</span>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h3><i class="fas fa-utensils"></i> SALCHIPAPA & CHORIPAPA</h3>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Salchipapa">
+                <div class="item-header">
+                    <h3>SALCHIPAPA LA BODEGA</h3>
+                    <span class="price">$14.000</span>
+                </div>
+                <p class="ingredients">2 porciones de papa, salchicha, tocineta, lluvia de queso, salsa de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Salchicha</span>
+                    <span class="tag">2 Porciones</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Choripapa">
+                <div class="item-header">
+                    <h3>CHORIPAPA SUPER BODEGA</h3>
+                    <span class="price">$14.000</span>
+                </div>
+                <p class="ingredients">2 porciones de papa, chorizo, tocineta, lluvia de queso, salsa de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Chorizo</span>
+                    <span class="tag">2 Porciones</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="costillas-alitas" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-drumstick-bite"></i> COSTILLAS Y ALITAS BBQ</h2>
+                <p class="category-subtitle">Cocidas a la perfección con nuestra salsa BBQ</p>
+            </div>
+            
+            <div class="section-title">
+                <h3><i class="fas fa-bone"></i> COSTILLAS BBQ</h3>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Costillas+BBQ">
+                <div class="item-header">
+                    <h3>LA BODEGA (250 gr)</h3>
+                    <span class="price">$18.000</span>
+                </div>
+                <p class="ingredients">250 gr de costilla de cerdo, bañadas en salsa bbq y porciones de papa fritas y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">250gr</span>
+                    <span class="tag">+ Bebida</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Costillas+Clasica">
+                <div class="item-badge special-badge">Para 2</div>
+                <div class="item-header">
+                    <h3>CLÁSICA (500 gr)</h3>
+                    <span class="price">$32.000</span>
+                </div>
+                <p class="ingredients">500gr de costilla de cerdo bañadas en salsa bbq, ensalada, patacones, papas francesa y 2 bebidas.</p>
+                <div class="item-tags">
+                    <span class="tag">500gr</span>
+                    <span class="tag">2 Bebidas</span>
+                    <span class="tag">Ensalada</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Costillas+Super">
+                <div class="item-badge premium-badge">¡FAMILIAR!</div>
+                <div class="item-header">
+                    <h3>SUPER BODEGA (1KL)</h3>
+                    <span class="price">$56.000</span>
+                </div>
+                <p class="ingredients">1KL de costilla de cerdo bañadas en salsa bbq, ensalada, patacones, papas francesa y 4 bebidas.</p>
+                <div class="item-tags">
+                    <span class="tag">1 Kilo</span>
+                    <span class="tag">4 Bebidas</span>
+                    <span class="tag">Familiar</span>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h3><i class="fas fa-drumstick-bite"></i> ALITAS BBQ</h3>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Alitas+x12">
+                <div class="item-header">
+                    <h3>LA BODEGA (12 piezas)</h3>
+                    <span class="price">$18.000</span>
+                </div>
+                <p class="ingredients">12 piezas de ala en salsa de bbq, papa a la francesa, y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">12 Piezas</span>
+                    <span class="tag">+ Bebida</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Alitas+x24">
+                <div class="item-badge special-badge">Para 2</div>
+                <div class="item-header">
+                    <h3>CLÁSICA (24 piezas)</h3>
+                    <span class="price">$32.000</span>
+                </div>
+                <p class="ingredients">24 piezas de ala en salsa de bbq, papa a la francesa, y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">24 Piezas</span>
+                    <span class="tag">+ Bebida</span>
+                </div>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Alitas+x48">
+                <div class="item-badge premium-badge">¡FAMILIAR!</div>
+                <div class="item-header">
+                    <h3>SUPER BODEGA (48 piezas)</h3>
+                    <span class="price">$56.000</span>
+                </div>
+                <p class="ingredients">48 piezas de ala en salsa de bbq, papa a la francesa, y bebida.</p>
+                <div class="item-tags">
+                    <span class="tag">48 Piezas</span>
+                    <span class="tag">+ Bebida</span>
+                    <span class="tag">Familiar</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="arepas" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-bread-slice"></i> AREPAS</h2>
+                <p class="category-subtitle">Arepas tradicionales rellenas con los mejores ingredientes</p>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Arepa+La+Bodega">
+                <div class="item-header">
+                    <h3>LA BODEGA</h3>
+                    <span class="price">$8.000</span>
+                </div>
+                <p class="ingredients">Carne, queso, maíz, tocineta, papitas chips, salsa de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Carne</span>
+                    <span class="tag">Tradicional</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Arepa+Clasica">
+                <div class="item-badge special-badge">Especial</div>
+                <div class="item-header">
+                    <h3>CLÁSICA</h3>
+                    <span class="price">$10.000</span>
+                </div>
+                <p class="ingredients">Carne, chorizo, queso, maíz, tocineta, papitas chips, salsa de la casa.</p>
+                <div class="item-tags">
+                    <span class="tag">Con Chorizo</span>
+                    <span class="tag">Completa</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="platos" class="menu-category">
+            <div class="category-header">
+                <h2><i class="fas fa-utensils"></i> PLATOS A LA CARTA</h2>
+                <p class="category-subtitle">Platos principales para una experiencia completa</p>
+            </div>
+
+            <div class="menu-item premium" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Churrasco">
+                <div class="item-badge premium-badge">Premium</div>
+                <div class="item-header">
+                    <h3>CHURRASCO (400 gr)</h3>
+                    <span class="price">$30.000</span>
+                </div>
+                <p class="ingredients">400 gr de carne de res, porción de papa fritas, ensalada, patacón.</p>
+                <div class="item-tags">
+                    <span class="tag">400gr Carne</span>
+                    <span class="tag">Plato Completo</span>
+                </div>
+            </div>
+
+            <div class="menu-item" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Pechuga">
+                <div class="item-header">
+                    <h3>PECHUGA (300 gr)</h3>
+                    <span class="price">$25.000</span>
+                </div>
+                <p class="ingredients">300gr de filete de pollo, ensalada, patacones, papas francesa.</p>
+                <div class="item-tags">
+                    <span class="tag">300gr Pollo</span>
+                    <span class="tag">Saludable</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Pechuga+Gratinada">
+                <div class="item-badge special-badge">Con Queso</div>
+                <div class="item-header">
+                    <h3>PECHUGA GRATINADA (300 gr)</h3>
+                    <span class="price">$27.000</span>
+                </div>
+                <p class="ingredients">300gr de filete de pollo, ensalada, patacones, papas francesa y queso.</p>
+                <div class="item-tags">
+                    <span class="tag">Gratinada</span>
+                    <span class="tag">Con Queso</span>
+                </div>
+            </div>
+
+            <div class="menu-item special" data-image-src="https://placehold.co/600x400/2c2c2c/d4ac0d?text=Pechuga+con+Champiñon">
+                <div class="item-badge special-badge">Gourmet</div>
+                <div class="item-header">
+                    <h3>PECHUGA S. CHAMPIÑÓN (300 gr)</h3>
+                    <span class="price">$29.000</span>
+                </div>
+                <p class="ingredients">300gr de filete de pollo, ensalada, patacones, papas francesa y champiñón.</p>
+                <div class="item-tags">
+                    <span class="tag">Champiñones</span>
+                    <span class="tag">Gourmet</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="imageModal" class="modal">
+      <span class="modal-close" id="closeModalBtn">&times;</span>
+      <img class="modal-content" id="modalImage" alt="Vista previa del producto">
+    </div>
+    <div id="modalOverlay"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // ELEMENTOS DEL DOM
+            const navButtons = document.querySelectorAll('.nav-button');
+            const categories = document.querySelectorAll('.menu-category');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const navMenu = document.getElementById('menu-nav');
+            const overlay = document.getElementById('overlay');
+            const productItems = document.querySelectorAll('.menu-item');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const modalOverlay = document.getElementById('modalOverlay');
+
+            // NAVEGACIÓN DE CATEGORÍAS
+            function switchCategory(targetCategory) {
+                navButtons.forEach(btn => btn.classList.toggle('active', btn.getAttribute('data-category') === targetCategory));
+                categories.forEach(category => category.classList.toggle('active', category.id === targetCategory));
+            }
+
+            // MENÚ MÓVIL (SIDEBAR)
+            function closeMobileMenu() {
+                navMenu.classList.remove('nav-open');
+                overlay.classList.remove('active');
+                mobileMenuButton.classList.remove('open');
+            }
+            
+            function toggleMobileMenu() {
+                navMenu.classList.toggle('nav-open');
+                overlay.classList.toggle('active');
+                mobileMenuButton.classList.toggle('open');
+            }
+            
+            // MODAL DE IMÁGENES
+            function openModal(imageSrc) {
+                if(imageSrc) {
+                    modalImage.src = imageSrc;
+                    modal.classList.add('active');
+                    modalOverlay.classList.add('active');
+                }
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+                modalOverlay.classList.remove('active');
+            }
+
+            // ASIGNACIÓN DE EVENTOS
+            navButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation(); 
+                    switchCategory(button.getAttribute('data-category'));
+                    if (window.innerWidth <= 768 && navMenu.classList.contains('nav-open')) {
+                        closeMobileMenu();
+                    }
+                });
+            });
+
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+            overlay.addEventListener('click', closeMobileMenu);
+            
+            productItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const imageSrc = item.getAttribute('data-image-src');
+                    openModal(imageSrc);
+                });
+            });
+
+            closeModalBtn.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', closeModal);
+
+            // Animación de aparición de elementos
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos del menú
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+
+</body>
+</html>
